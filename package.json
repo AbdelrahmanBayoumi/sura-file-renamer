@@ -1,0 +1,32 @@
+{
+  "name": "rename-sura-app",
+  "version": "0.0.1",
+  "description": "An Electron app to rename files based on suraObject.json",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder"
+  },
+  "author": "Abdelrahman Bayoumi",
+  "build": {
+    "appId": "com.example.rename-sura-app",
+    "productName": "Rename Sura Files",
+    "win": {
+      "target": "nsis",
+      "icon": "icon.ico"
+    },
+    "asar": false,
+    "files": [
+      "main.js",
+      "renderer.js",
+      "index.html",
+      "suraObject.json",
+      "icon.ico",
+      "node_modules/**/*"
+    ]
+  },
+  "devDependencies": {
+    "electron": "^31.1.0",
+    "electron-builder": "^24.13.3"
+  }
+}
